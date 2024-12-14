@@ -72,22 +72,6 @@ Google Workspace Integration은 Obsidian과 Google Workspace를 통합하는 플
 	2.	통합 활성화
 	•	Google Calendar, Tasks, Drive 통합을 개별적으로 활성화/비활성화할 수 있습니다.
 
-
-파일 구조
-
-obsidian-plugin/
-├── manifest.json
-├── main.ts
-├── settings.ts
-├── google-auth.ts
-├── parsers/
-│   ├── calendarParser.ts
-│   ├── taskParser.ts
-│   ├── driveParser.ts
-└── ui/
-    ├── feedback.ts
-    └── quickAccess.ts
-
 기여
 	1.	이 프로젝트에 기여하려면 Issues를 확인하고 제안하거나 문제를 보고하세요.
 	2.	Pull Request를 통해 코드 변경 사항을 제출하세요.
