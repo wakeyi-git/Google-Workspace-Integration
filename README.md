@@ -9,17 +9,26 @@ Google Workspace Integration은 Obsidian과 Google Workspace를 통합하는 플
 
 1. Google Calendar 통합
 	•	노트에서 #calendar 구문을 인식하여 Google Calendar에 이벤트를 자동으로 생성합니다.
-    #calendar/Meeting @2024-12-15 14:00-15:00
+
+#calendar/Meeting @2024-12-15 14:00-15:00
+
+
 	•	이벤트의 제목, 날짜, 시간, 설명을 지원합니다.
 
 2. Google Tasks 통합
 	•	#task 구문을 인식하여 Google Tasks에 작업을 추가합니다.
-    #task/Buy groceries "Milk, eggs, bread" @2024-12-20
+
+#task/Buy groceries "Milk, eggs, bread" @2024-12-20
+
+
 	•	작업의 제목, 메모, 마감일을 설정할 수 있습니다.
 
 3. Google Drive 통합
 	•	노트에서 [[filename]] 형식을 인식하여 Google Drive에서 파일을 검색합니다.
-    Refer to the file [[project_notes]].
+
+Refer to the file [[project_notes]].
+
+
 
 4. 빠른 Google Drive 접근
 	•	커맨드 팔레트를 통해 Google Drive 파일 검색 및 열기:
@@ -44,22 +53,39 @@ Google Workspace Integration은 Obsidian과 Google Workspace를 통합하는 플
 
 1. Google Calendar
 	•	노트에 다음 형식으로 작성:
-    #calendar/Event Name @YYYY-MM-DD HH:MM-HH:MM
+
+#calendar/Event Name @YYYY-MM-DD HH:MM-HH:MM
+
+
 	•	예:
-    #calendar/Team Meeting @2024-12-15 14:00-15:00
+
+#calendar/Team Meeting @2024-12-15 14:00-15:00
+
+
 
 2. Google Tasks
 	•	노트에 다음 형식으로 작성:
-    #task/Task Title "Optional Notes" @YYYY-MM-DD
+
+#task/Task Title "Optional Notes" @YYYY-MM-DD
+
+
 	•	예:
-    #task/Buy groceries "Milk, eggs, bread" @2024-12-20
+
+#task/Buy groceries "Milk, eggs, bread" @2024-12-20
+
 
 
 3. Google Drive
 	•	노트에 다음 형식으로 작성:
-    [[filename]]
+
+[[filename]]
+
+
 	•	예:
-    Refer to [[project_notes]] for details.
+
+Refer to [[project_notes]] for details.
+
+
 
 4. 빠른 Google Drive 접근
 	1.	커맨드 팔레트(Ctrl+P 또는 Cmd+P) 열기.
@@ -71,6 +97,21 @@ Google Workspace Integration은 Obsidian과 Google Workspace를 통합하는 플
 	•	플러그인의 설정 탭에서 Google API 인증 토큰을 입력합니다.
 	2.	통합 활성화
 	•	Google Calendar, Tasks, Drive 통합을 개별적으로 활성화/비활성화할 수 있습니다.
+
+파일 구조
+
+obsidian-plugin/
+├── manifest.json
+├── main.ts
+├── settings.ts
+├── google-auth.ts
+├── parsers/
+│   ├── calendarParser.ts
+│   ├── taskParser.ts
+│   ├── driveParser.ts
+└── ui/
+    ├── feedback.ts
+    └── quickAccess.ts
 
 기여
 	1.	이 프로젝트에 기여하려면 Issues를 확인하고 제안하거나 문제를 보고하세요.
